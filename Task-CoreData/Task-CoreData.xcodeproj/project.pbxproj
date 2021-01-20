@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7979B24C25B79C16002F7C7E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B24B25B79C16002F7C7E /* TaskTableViewCell.swift */; };
 		7979B25025B7C3A7002F7C7E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B24F25B7C3A7002F7C7E /* DateFormatter.swift */; };
+		7979B25425B7D6C2002F7C7E /* TaskCompletion+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */; };
 		79F73F6425B782D100653FCF /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73F6325B782D100653FCF /* TaskListTableViewController.swift */; };
 		79F73F6725B7833500653FCF /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73F6625B7833500653FCF /* TaskDetailViewController.swift */; };
 		79F73F6A25B7889D00653FCF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73F6925B7889D00653FCF /* CoreDataStack.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7979B24B25B79C16002F7C7E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7979B24F25B7C3A7002F7C7E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskCompletion+Convenience.swift"; sourceTree = "<group>"; };
 		79F73F6325B782D100653FCF /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		79F73F6625B7833500653FCF /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		79F73F6925B7889D00653FCF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				7EDB767925B6996A00B80B7D /* Task_CoreData.xcdatamodeld */,
 				79F73F6925B7889D00653FCF /* CoreDataStack.swift */,
 				79F73F6C25B78A3E00653FCF /* Task+Convenience.swift */,
+				7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7EDB767325B6996A00B80B7D /* SceneDelegate.swift in Sources */,
 				7979B24C25B79C16002F7C7E /* TaskTableViewCell.swift in Sources */,
 				79F73F6425B782D100653FCF /* TaskListTableViewController.swift in Sources */,
+				7979B25425B7D6C2002F7C7E /* TaskCompletion+Convenience.swift in Sources */,
 				7979B25025B7C3A7002F7C7E /* DateFormatter.swift in Sources */,
 				79F73F6D25B78A3E00653FCF /* Task+Convenience.swift in Sources */,
 				79F73F6A25B7889D00653FCF /* CoreDataStack.swift in Sources */,

@@ -5,8 +5,14 @@
         <attribute name="isComplete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="tasksCompleted" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCompletion" inverseName="task" inverseEntity="TaskCompletion"/>
+    </entity>
+    <entity name="TaskCompletion" representedClassName="TaskCompletion" syncable="YES" codeGenerationType="class">
+        <attribute name="completionStatus" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="tasksCompleted" inverseEntity="Task"/>
     </entity>
     <elements>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="TaskCompletion" positionX="-63" positionY="9" width="128" height="59"/>
     </elements>
 </model>

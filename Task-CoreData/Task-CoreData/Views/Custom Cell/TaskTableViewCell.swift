@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TaskCompletionDelegate: AnyObject {
-    func taskCellButtonTapped(_ sender: TaskTableViewCell)
+    func taskCellButtonTapped(_ sender: TaskTableViewCell, isComplete: Bool, task: Task)
 }
 
 class TaskTableViewCell: UITableViewCell {
@@ -26,13 +26,15 @@ class TaskTableViewCell: UITableViewCell {
         }
     }
     
+    var completionStatus: Bool = false
+    
     weak var delegate: TaskCompletionDelegate?
     
     // MARK: - Actions
     @IBAction func completionButtonTapped(_ sender: Any) {
-        if let delegate = delegate {
-            delegate.taskCellButtonTapped(self)
-        }
+        guard let task = task else { return }
+        completionStatus.toggle()
+        delegate?.taskCellButtonTapped(self, isComplete: completionStatus, task: task)
     }
     
     // MARK: - Helper Functions
