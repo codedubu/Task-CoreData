@@ -16,10 +16,14 @@ class TaskController {
     // MARK: - Source of Truth
     var sections: [[Task]] { [notCompletedTasks, completedTasks] }
     
+//    var sections2: [TaskTag:[Task]]
+    
     
     var notCompletedTasks: [Task] = []
     var completedTasks: [Task] = []
     //    var tasks: [Task] = []
+    
+    var dict: [TaskTag:[Task]] = [:]
     
     // MARK: - Fetch Request
     private lazy var fetchRequest: NSFetchRequest<Task> = {
@@ -82,6 +86,7 @@ class TaskController {
         if task.isComplete {
             if let index = completedTasks.firstIndex(of: task) {
                 completedTasks.remove(at: index)
+                
             }
         } else {
             if let index = notCompletedTasks.firstIndex(of: task) {

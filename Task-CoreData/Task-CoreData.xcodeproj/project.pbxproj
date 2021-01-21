@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7966CD2325B923B2004C7190 /* TaskTag+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966CD2225B923B2004C7190 /* TaskTag+Convenience.swift */; };
 		7979B24C25B79C16002F7C7E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B24B25B79C16002F7C7E /* TaskTableViewCell.swift */; };
 		7979B25025B7C3A7002F7C7E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B24F25B7C3A7002F7C7E /* DateFormatter.swift */; };
 		7979B25425B7D6C2002F7C7E /* TaskCompletion+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7966CD2225B923B2004C7190 /* TaskTag+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskTag+Convenience.swift"; sourceTree = "<group>"; };
 		7979B24B25B79C16002F7C7E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7979B24F25B7C3A7002F7C7E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskCompletion+Convenience.swift"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				79F73F6925B7889D00653FCF /* CoreDataStack.swift */,
 				79F73F6C25B78A3E00653FCF /* Task+Convenience.swift */,
 				7979B25325B7D6C2002F7C7E /* TaskCompletion+Convenience.swift */,
+				7966CD2225B923B2004C7190 /* TaskTag+Convenience.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				79F73F6D25B78A3E00653FCF /* Task+Convenience.swift in Sources */,
 				79F73F6A25B7889D00653FCF /* CoreDataStack.swift in Sources */,
 				7EDB767B25B6996A00B80B7D /* Task_CoreData.xcdatamodeld in Sources */,
+				7966CD2325B923B2004C7190 /* TaskTag+Convenience.swift in Sources */,
 				79F73F7125B78E6900653FCF /* TaskController.swift in Sources */,
 				79F73F6725B7833500653FCF /* TaskDetailViewController.swift in Sources */,
 			);

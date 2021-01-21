@@ -12,11 +12,11 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var taskNameTextField: UITextField!
     @IBOutlet weak var taskNotesTextView: UITextView!
     @IBOutlet weak var taskDueDatePicker: UIDatePicker!
+    @IBOutlet weak var taskProjectPicker: UIPickerView!
     
     // MARK: - Properties
     var task: Task?
     var date: Date?
-    
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
