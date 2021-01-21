@@ -14,7 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (authorization, error) in
+            if let error = error {
+                print("There was an error requesting authorization to use notifications: \(error.localizedDescription)")
+            }
+            
+            if authorization {
+                print("✅ The user authorized notification.")
+            } else {
+                print("❌ The user did not authorize notifications.")
+            }
+            
+        }
+
         return true
     }
 

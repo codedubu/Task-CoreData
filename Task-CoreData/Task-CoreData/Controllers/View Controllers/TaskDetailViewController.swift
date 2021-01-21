@@ -21,6 +21,13 @@ class TaskDetailViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+        
+        self.taskNameTextField.layer.borderWidth = 1
+        self.taskNameTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.taskNotesTextView.layer.borderWidth = 1
+        self.taskNotesTextView.layer.borderColor = UIColor.lightGray.cgColor
+        
         updateViews()
     }
     

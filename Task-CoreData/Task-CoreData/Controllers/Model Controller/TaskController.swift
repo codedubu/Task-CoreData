@@ -11,9 +11,11 @@ class TaskController {
     
     // MARK: - Shared Instance
     static let shared = TaskController()
+    let notificationScheduler = NotificationScheduler()
     
     // MARK: - Source of Truth
     var sections: [[Task]] { [notCompletedTasks, completedTasks] }
+    
     
     var notCompletedTasks: [Task] = []
     var completedTasks: [Task] = []
@@ -32,6 +34,7 @@ class TaskController {
     func createTaskWith(name: String, notes: String?, dueDate: Date?) {
         let newTask = Task(name: name, notes: notes, dueDate: dueDate)
         notCompletedTasks.append(newTask)
+        notificationScheduler.scheduleNotifications(task: newTask)
         CoreDataStack.saveContext()
         
     }
@@ -48,6 +51,8 @@ class TaskController {
         task.name = name
         task.notes = notes
         task.dueDate = dueDate
+        notificationScheduler.cancelNotifications(task: task)
+        notificationScheduler.scheduleNotifications(task: task)
         CoreDataStack.saveContext()
     }
     
@@ -72,7 +77,7 @@ class TaskController {
         task.isComplete.toggle()
         CoreDataStack.saveContext()
     }
-    // MARK: - TODO
+
     func deleteTask(task: Task) {
         if task.isComplete {
             if let index = completedTasks.firstIndex(of: task) {
@@ -84,6 +89,7 @@ class TaskController {
             }
         }
         CoreDataStack.container.viewContext.delete(task)
+        notificationScheduler.cancelNotifications(task: task)
         CoreDataStack.saveContext()
         
     }

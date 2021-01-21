@@ -14,10 +14,9 @@ protocol TaskCompletionDelegate: AnyObject {
 class TaskTableViewCell: UITableViewCell {
     // MARK: - Outlets
     @IBOutlet weak var taskNameLabel: UILabel!
-    
     @IBOutlet weak var taskDueDateLabel: UILabel!
-    
     @IBOutlet weak var completionButton: UIButton!
+
     
     // MARK: - Properties
     var task: Task? {
@@ -46,8 +45,10 @@ class TaskTableViewCell: UITableViewCell {
         
         completionButton.setImage(image, for: .normal)
         
-        guard let date = task.dueDate else { return }
-        taskDueDateLabel.text = date.dateToString()
+//        guard let date = task.dueDate else { return }
+        taskDueDateLabel.text = task.dueDate?.dateToString() ?? "No date"
+//        taskNotesTextView.text = task.notes
+//        taskNotesTextViewHC.constant = self.taskNotesTextView.contentSize.height
     }
     
     

@@ -25,7 +25,6 @@ class TaskListTableViewController: UITableViewController {
         return TaskController.shared.sections.count
     }
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TaskController.shared.sections[section].count
     }
@@ -37,7 +36,6 @@ class TaskListTableViewController: UITableViewController {
         cell.delegate = self
         cell.task = task
         
-        
         return cell
     }
     
@@ -48,7 +46,7 @@ class TaskListTableViewController: UITableViewController {
             return "Completed"
         }
     }
-    // MARK: - TODO
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let taskToDelete = TaskController.shared.sections[indexPath.section][indexPath.row]
@@ -80,6 +78,4 @@ extension TaskListTableViewController: TaskCompletionDelegate {
         sender.updateViews()
         tableView.reloadData()
     }
-    
-    
-}
+} // End of extension
